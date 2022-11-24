@@ -1,0 +1,47 @@
+
+#include <stdio.h>
+int bit2(int a)
+{
+    int k;
+    for(k=16;k>0;k--)
+    {
+        if(a&0x8000)
+        {
+            printf("1");
+        }
+        else
+        {
+            printf("0");
+        }
+        a=a<<1;
+    }
+    
+}
+int bit(int a)
+{
+    int k;
+for(k=0;k<16;k++)
+    {
+        if(a&0x1)
+        {
+            printf("1");
+        }
+        else
+        {
+            printf("0");
+        }
+        a=a>>1;
+    }
+}
+int main()
+{
+    int a=0x1234,k;
+    int (*fptr)(int );
+   fptr=bit;
+    fptr(a);
+    printf("\n");
+    fptr=bit2;
+    fptr(a);
+
+    return 0;
+}
