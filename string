@@ -1,4 +1,41 @@
 #include <stdio.h>
+void stringcharsearch(char str[])
+{
+    int i=0,k=0;
+    char cha;
+     printf("enter character you want search :");
+     scanf(" %c",&cha);
+    while(str[i]!='\0')
+    {
+        if(str[i]==cha)
+        {
+            k=1;
+            printf("searching character found:");
+            break;
+        }
+        i++;
+        
+    }
+    if(k==0)
+    {
+        printf("character not found");
+    }
+    
+}
+void stringlower(char str[])
+{
+    int i=0;
+    while(str[i]!='\0')
+    {
+        if(str[i]>65 & str[i]<92)
+        {
+            str[i]=str[i]+32;
+        }
+        i++;
+        
+    }
+    printf("string lower case %s",str);
+}
 void stringupper(char str[])
 {
     int i=0;
@@ -72,7 +109,7 @@ int main() {
    char str[20];
    char str2[20];
    char ch;
-   printf("enter for 1.string lenght\n 2.string compare\n3.string cancatination\n4.string copy \n5.convert upper case \n6.convert lower case 7\n8.search for character in string\n");
+   printf("enter for 1.string lenght\n 2.string compare\n3.string cancatination\n4.string copy \n5.convert upper case \n6.convert lower case \n7.search for character in string\n");
    scanf("%[^\n]c",&ch);
    switch(ch)
    {
@@ -98,8 +135,12 @@ int main() {
         case '5':printf("enter string :");
                  scanf("%s",str);
                  stringupper(str);
+        case '6':printf("enter string :");
+                 scanf("%s",str);
+                 stringlower(str);
+        case '7':printf("enter string :");
+                 scanf("%s",str);
+                 stringcharsearch(str);
    }
 };
-                
-                
                 
