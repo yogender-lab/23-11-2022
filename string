@@ -1,0 +1,41 @@
+#include <stdio.h>
+void stringcompare(char str[],char str2[])
+{
+    int i=0,j=0;
+    while(str[i])!='\0' & str2[j]!='\0')
+    {
+        if(str[i]!str2[j])
+        {
+            str[k]=str[i]
+        }
+    }
+}
+void stringlenght(char str[])
+{
+    int i=0;
+    while(str[i]!='\0')
+    {
+        i++;
+    }
+    printf("string lenght=%d",i);
+}
+int main() {
+   char str[20];
+   char str2[20];
+   char ch;
+   printf("enter for 1.string lenght\n 2.string compare\n3.string cancatinate\n4.string copy \n5.convert upper case \n6.convert lower case 7\n8.search for character in string\n");
+   scanf("%[^\n]c",&ch);
+   switch(ch)
+   {
+       case '1':printf("enter string :");
+                scanf("%s",str);
+                stringlenght(str);
+                
+        case '2':printf("enter string 1:");
+                 scanf("%s",str);
+                 printf("enter string 2:");
+                 scanf("%s",str2);
+                 stringcompare(str,str2);
+   }
+};
+                
