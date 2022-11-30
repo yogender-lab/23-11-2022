@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+    int ele,i,j,p;
+    int arr[5]={10,20,30,40,50};
+    printf("which position need to place:");
+    scanf("%d",&p);
+    printf("enter element to insert:");
+    scanf("%d",&ele);
+    for(i=5;i>=p;i--)
+    {
+            arr[i]=arr[i-1];
+            
+            if(i==p)
+            {
+            arr[i]=ele;
+            };
+        
+    }
+    for(i=0;i<5;i++)
+    {
+        printf("%d\t",arr[i]);
+    }
+
+    return 0;
+}
