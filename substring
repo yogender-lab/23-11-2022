@@ -1,0 +1,38 @@
+#include <stdio.h>
+2	#include <string.h>
+5	
+6	int main(){
+7	    char str[MAX]="what are you doing";
+8	    char longest_str[100];
+9	    int len;
+10	    int i, index = 0;
+11	    int max_wlen = 0, wlen = 0;
+12	
+13	    len = strlen(str);
+14	
+15	    for (i = 0; i <= len; i++) {
+16	
+17	        if (str[i] != ' ' && str[i] != '\0') {
+18	            wlen++;
+19	            continue;
+20	        }
+21	
+22	        /* space or end of string */
+23	        if (wlen > max_wlen) {
+24	            max_wlen = wlen;
+25	            index = i - max_wlen;
+26	        }
+27	
+28	        wlen = 0;
+29	    }
+30	
+31	    for (i = 0; i < max_wlen; i++) {
+32	        longest_str[i] = str[index+i];
+33	    }
+34	
+35	    longest_str[i] = '\0';
+36	
+37	    printf ("Longest word: %s.\n", longest_str);
+38	    printf ("Longest word length: %d.\n", max_wlen);
+39	    return 1;
+40	}
