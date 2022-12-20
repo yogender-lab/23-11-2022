@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main()
+{
+   int a,b,count=0,x,i=0;
+   printf("enter a value");
+   scanf("%d",&a);
+   printf("enter b value");
+   scanf("%d",&b);
+   x=a^b;
+/*
+  while(i<=3)
+  {
+      if((x>>i)&1)  
+    {
+    count++;
+
+   }
+   i++;
+  }
+  printf("%d",count);*/
+  while(i<=3)
+  {
+      if(x&1)
+      {
+          count++;
+      }
+      x=x>>1;
+      i++;
+  }
+  printf("%d",count);
+    return 0;
+}
