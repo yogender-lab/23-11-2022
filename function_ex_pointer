@@ -1,0 +1,35 @@
+#include <stdio.h>
+int add(int ,int );
+int sub(int ,int );
+int mul(int ,int );
+int divi(int ,int );
+int main()
+{
+   int a,b,i;
+   int (*fp[])(int,int)={add,sub,mul,divi};
+   char *operation[]={"Add","subtract","multiply","divide"};
+   printf("enter two numbers:");
+   scanf("%d %d",&a,&b);
+   for(i=0;i<4;i++)
+   {
+       printf("%s: %d\n",operation[i],(*fp[i])(a,b));
+       
+   }
+     return 0;
+}
+int add(int a,int b)
+{
+    return a+b;
+}
+int sub(int a,int b)
+{
+    return a-b;
+}
+int mul(int a,int b)
+{
+    return a*b;
+}
+int divi(int a,int b)
+{
+    return a/b;
+}
