@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<stdlib.h>
+unsigned int pstrlen(char *str);
+int main() {
+  char str[50];
+  printf("enter name :");
+ // scanf("%s",str);
+ gets(str);
+ printf("length of string %d",strlen(str));
+  printf("lenght of the string is :%u\n",pstrlen(str));
+
+  return 0;
+}
+unsigned int pstrlen(char *str)
+{
+  char *p=str;
+  while(*p!='\0')
+  {
+    p++;
+  }
+  return p-str;
+}
