@@ -1,0 +1,13 @@
+*******************************************************************************/
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    
+    int d,m,y;
+    char *month[]={"Jan","feb","mar","apr","may","jun","july","aug","sep","oct","nov","dec"};
+    printf("enter date/month/year: ");
+    scanf("%d/%d/%d",&d,&m,&y);
+    printf("%d %s %d",d,month[m-1],y);
+    return 0;
+}
