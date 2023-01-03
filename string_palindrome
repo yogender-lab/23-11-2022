@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdlib.h>
+void palindrome_or_not(char str[]);
+int main()
+{
+   char str[20];
+   printf("enter string 1:");
+   scanf("%s",str);
+   palindrome_or_not(str);
+    return 0;
+}
+void palindrome_or_not(char str[])
+{
+    int len=strlen(str);
+    int i,j,flag=0;
+    for(i=len-1,j=0;j<=i;i--,j++)
+    {
+        if(str[i]!=str[j])
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag==0)
+    {
+        printf("string is palindrome");
+    }
+    else
+    {
+        printf("string not a palindrome");
+    }
+}
