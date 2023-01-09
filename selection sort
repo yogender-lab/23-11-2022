@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int i,j,temp,arr[5]={5,3,2,1,6};
+    for(i=0;i<4;i++)
+    {
+        int min=i;
+        for(j=i+1;j<5;j++)
+        {
+            if(arr[min]>arr[j])
+            {
+                min=j;
+            }
+        }
+        if(min!=i)
+        {
+            temp=arr[i];
+            arr[i]=arr[min];
+            arr[min]=temp;
+            
+        }
+    }
+    printf("printing selection sorting: ");
+    for(i=0;i<5;i++)
+    {
+        printf("%d",arr[i]);
+    }
+    return 0;
+}
