@@ -1,0 +1,20 @@
+#include<stdio.h>
+int main()
+{
+        /* pointer to const data*/
+        const int a=10;
+//      a=20;//we can not change variable
+        const int b=10;
+        const int *ptr=&a;//we can change pointer
+        ptr=&b;
+        /*const pointer*/
+        int x=10,y=20;
+        int *const p=&x;//we can not change pointer
+//      p=&y;
+        /*const pointer to const data*/
+        const int q=10;
+        const int *const ptr1=&q;//we can not change variable and pointer
+
+
+        return 0;
+}
