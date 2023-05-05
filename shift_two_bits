@@ -1,0 +1,42 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int num,p1,p2;
+    printf("enter number:");
+    scanf("%d",&num);
+    for(int i=31;i>=0;i--)
+    {
+        if(1&(num>>i))
+        {
+            printf("1");
+        }
+        else
+        {
+            printf("0");
+        }
+    }
+    printf("enter position1:");
+    scanf("%d",&p1);
+    printf("enter position2:");
+    scanf("%d",&p2);
+    if(((num>>p1)&1)!=((num>>p2)&1))
+    {
+        num=num^(1<<p1);
+        num=num^(1<<p2);
+    }
+    for(int i=31;i>=0;i--)
+    {
+        if(1&(num>>i))
+        {
+            printf("1");
+        }
+        else
+        {
+            printf("0");
+        }
+    }
+
+    return 0;
+}
