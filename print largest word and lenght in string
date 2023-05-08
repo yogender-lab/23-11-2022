@@ -1,0 +1,42 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+    char str[50]="hi";
+    char str1[10];
+   int i=0,k=0,max=0,index=0;
+   printf("enter string:");
+    scanf("%[^\n]s",str);
+    int len=strlen(str);
+    for(i=0;i<=len;i++)
+    {
+        if(str[i]!=' ' && str[i]!='\0')
+        {
+            k++;
+            continue;
+        }
+        if(k>max)
+        {
+            max=k;
+            index=i-max;
+        }
+        k=0;
+    }
+   // printf("%d",max);
+    for(i=0;i<max;i++)
+    {
+        str1[i]=str[index+i];
+    }
+    str1[i]='\0';
+    printf("max lenght=%d max word=%s",max,str1);
+
+    return 0;
+}
