@@ -1,0 +1,36 @@
+
+#include <stdio.h>
+#include<string.h>
+
+int main()
+{
+    char str[50];
+    int i=0,k=0,max=0,min=0;
+    printf("enter string:");
+    scanf("%[^\n]s",str);
+    int len=strlen(str);
+    for(int i=0;i<=len;i++)
+    {
+        if(str[i]!=' ' && str[i]!='\0')
+        {
+            k++;
+           continue;
+        }
+        if(min==0)
+        {
+            min=k;
+        }
+        if(max<k)
+        {
+            max=k;
+        }
+        if(min>=k)
+        {
+            min=k;
+        }
+        k=0;
+    }
+    printf("%d %d",max,min);
+
+    return 0;
+}
